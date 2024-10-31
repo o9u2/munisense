@@ -2,8 +2,6 @@ def extract_input_numbers(filename):
     input_numbers = []
     with open(filename) as f:
         for line in f:
-            # print(line)
-            # print(type(line))
             digits = [char for char in line if char.isdigit()]
             if digits:
                 input_numbers.append(digits)
@@ -20,13 +18,12 @@ def sum_calibrators(calibration_values):
 
 
 def main():
-    filename = 'input.txt'
+    filename = "input.txt"
     list_of_numbers = extract_input_numbers(filename)
 
-    
     calibration_values = concat_first_last_digit(list_of_numbers)
+    print(calibration_values)
 
-    
     print(sum_calibrators(calibration_values))
 
 
